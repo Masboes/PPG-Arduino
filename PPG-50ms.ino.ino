@@ -3,6 +3,7 @@ int WVPin = 0;     //Wijs Vinger pin
 int BHPPin = 1;    //Bovenkant Handpalm pin
 int MVHPin = 2;    //Muis van hand pin
 int DPin = 3;      //Duim Pin 
+int BatteryPin = 5
 
 //Reading assignment
 int WVReading;
@@ -105,6 +106,7 @@ void loop() {
   Serial.print(MVHForce);
   Serial.print(" ");
   Serial.println(DForce); 
-  delay(50);
+  Serial.print(" ");
+  Serial.println(analogRead(BatteryPin) * (5.0 / 1023.0))
+  delay(100);
 }
-
